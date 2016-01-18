@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>github api</title>
+    <link href="vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="vendors/angular/angular.min.js"></script>
+    <script src="assets/scripts/client.min.js"></script>
+</head>
+<body>
+    <div ng-controller="mainController">
+
+        <h2>it works</h2>
+
+        <ul class="well col-md-3" ng-repeat="project in git.data">
+        <li>{{project.id}}</li>
+        <li>{{project.actor.login}}</li>
+        <a href="{{project.repo.url}}"><li>{{project.repo.name}}</li></a>
+        </ul>
+    </div>
+</body>
+</html>
